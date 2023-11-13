@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js中的对象</title>
+</head>
+<body>
+    <script>
+        // 定义对象（字面量）
+        var obj ={
+            name:'zhangsan',
+            age:18,
+            sayhi:function(){
+                console.log('大家好')
+            },
+        }
+        
+        console.log(obj.name,obj.age)
+        obj.sayhi()
+
+        //通过构造函数定义对象
+        function Person(name,age){
+            this.name = name; 
+            this.age = age;
+        }
+        
+        var p = new Person('zhaosi',25)//必须先new出来一个对象，不然没有定义了
+        console.log(p.name,p.age)
+
+    </script>
+</body>
+</html>
